@@ -1,0 +1,29 @@
+CardManager:
+class Card
+rdmCardMethod
+rdmNumberMethod
+
+Deck:
+makingTheDeck
+assigningCardsMethod
+drawingACard
+
+Execute:
+main
+
+Game:
+startingTheGame
+startingTheTurn
+
+TableCard:
+-- createTableCard
+getLastTableCard
+
+AI:
+computerPlaceACard
+
+Human:
+drawOrPlaceMethod
+placingACard
+
+
