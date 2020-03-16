@@ -1,29 +1,73 @@
-CardManager:
-class Card
-rdmCardMethod
-rdmNumberMethod
+Execute
+    - Make new Game object
+Game
+    Game()              //debug option,     FIKS MER LOOPING P1 P2
+    status(Player p)        //checks if oneLeft or WonTheGame
+    turnUpdate()            //displays cards
+    calcTurnType()          //p1 -> choice || noChoice OR p2 -> computerPlace || drawThree
+    placeAble()
+    cardPossible(Card c)
+    choice()                //Option place or draw
+    noChoice()              //-> drawThree
+    drawThree()
+    drawCard(Player p)
+    placeCard()
+    computerPlace()
 
-Deck:
-makingTheDeck
-assigningCardsMethod
-drawingACard
+GameSetup
+    GameSetup()
+    getDeck()
+    getTable()
+    getP1()
+    getP2()
+    getTableString()                        //Change to table.toString
+    getP1String()                           //Change to p1.toString
+    getP2String()                           // --||--
+    getLastTable()                          //MOVE TO TOOLS ?
+    assignPHand(Deck d, ArrayList<Card> p)
+    assignTable(Deck d, ArrayList<Card> t)
+    toString()
 
-Execute:
-main
+Deck
+    Deck()
+    getDeck()
+    addTableCard(ArrayList<Card> tableCard)
+    addCardToHand(ArrayList<Card> hand)
+    removeCard(Card[] array, int index)
+    removeCard(ArrayList<Card> array, int index)
+    toString()
 
-Game:
-startingTheGame
-startingTheTurn
+Player
+    PName {p1, p2}
+    Player(PName name)
+    getHand()
+    getName()
+    indexHand()
+    setName(PName name)
 
-TableCard:
--- createTableCard
-getLastTableCard
+Hand
+    Hand()                                      //Your cards: displays different (0:[13spades] and [13spades]
+    getHand()
+    toString()
 
-AI:
-computerPlaceACard
+Card
+    Suit {spades, hearts,m clubs, diamonds}
+    Card()                                      //UNNECESSARY ??
+    Card(Suit s, int n)
+    getSuit()
+    getNumber()
+    toString()
 
-Human:
-drawOrPlaceMethod
-placingACard
+
+Table
+    Table()
+    getTableCards()
+    toString()                                  //Add final layout
+                                  // problem difference lastTable & table
+                                  //Can i change in GameSetup, and it changes automatically?
+
+Tools
+    rdmCardIndex(Deck d)
+    rdmNumber(int max)
 
 
